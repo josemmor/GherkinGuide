@@ -2,8 +2,6 @@
 
 GherkinGuide is an open-source Python tool designed to simplify and enhance the process of writing and managing Gherkin scenarios. It provides a user-friendly interface to create, modify, and manage your Gherkin features, scenarios, and steps efficiently.
 
-First I will create an desktop app, later, create an web app.
-
 ## Features
 
 - **Create Features**: Easily create new Gherkin features.
@@ -20,6 +18,7 @@ First I will create an desktop app, later, create an web app.
 - **Access Permissions**: Manage permissions for different users.
 - **Criticality Management**: Handle scenario criticality to prioritize testing efforts.
 - **Branch Management**: Manage and merge different branches for collaborative work.
+- **Language Support**: Easily switch between languages (currently supports English and Spanish).
 
 ## Installation
 
@@ -39,9 +38,13 @@ bash
 python main.py
 
 
+### Changing the Language
+
+To change the language of the interface, go to the "Configuración" option in the menu and select your preferred language by clicking on the respective flag (Spain for Spanish, US for English).
+
 ## Contribution
 
-We welcome contributions to GherkinGuide! If you have an idea for a new feature or have found a bug, please open an issue or submit a pull request.
+We welcome contributions to GherkinGuide! If you have an idea for a new feature, have found a bug, or would like to propose changes to the code, please open an issue or submit a pull request.
 
 ### Contributing Guidelines
 
@@ -56,19 +59,15 @@ We welcome contributions to GherkinGuide! If you have an idea for a new feature 
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License. This means you can:
 
-- *Share* — copy and redistribute the material in any medium or format
-- *Adapt* — remix, transform, and build upon the material
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
 
 As long as you follow the license terms:
 
-- *Attribution* — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- *NonCommercial* — You may not use the material for commercial purposes.
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- **NonCommercial** — You may not use the material for commercial purposes.
 
 You can view the full license here: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
-
-## Contribution
-
-We welcome contributions to GherkinGuide! If you have an idea for a new feature, have found a bug, or would like to propose changes to the code, please open an issue or submit a pull request. Contributions are subject to the terms of the CC BY-NC 4.0 license.
 
 ## Contact
 
