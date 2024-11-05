@@ -2,6 +2,8 @@
 
 GherkinGuide is an open-source Python tool designed to simplify and enhance the process of writing and managing Gherkin scenarios. It provides a user-friendly interface to create, modify, and manage your Gherkin features, scenarios, and steps efficiently.
 
+First I will create an desktop app, later, create an web app.
+
 ## Features
 
 - **Create Features**: Easily create new Gherkin features.
