@@ -5,7 +5,14 @@
       "branches": "Branches",
       "config": "Configuration",
       "management": "Management",
-      "language_section": "Language"
+      "language_section": "Language",
+      "about_section": "About GherkinGuide",
+      "version": "Version",
+      "creator": "Author",
+      "last_updated": "Last Updated",
+      "create":"Create",
+      "search":"Search",
+      "import":"Import"
     },
     "es": {
       "title": "Gherkin Guide",
@@ -13,6 +20,13 @@
       "branches": "Ramas",
       "config": "Configuración",
       "management": "Gestión",
-      "language_section": "Idioma"
+      "language_section": "Idioma",
+      "about_section": "Acerca de GherkinGuide",
+      "version": "Versión",
+      "creator": "Autor",
+      "last_updated": "Última Actualización",
+      "create":"Crear",
+      "search":"Buscar",
+      "import":"Importar"
     }
   }
