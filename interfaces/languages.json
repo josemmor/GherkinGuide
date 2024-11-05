@@ -1,0 +1,18 @@
+{
+    "en": {
+      "title": "Gherkin Guide",
+      "features": "Features",
+      "branches": "Branches",
+      "config": "Configuration",
+      "management": "Management",
+      "language_section": "Language"
+    },
+    "es": {
+      "title": "Gherkin Guide",
+      "features": "Features",
+      "branches": "Ramas",
+      "config": "Configuración",
+      "management": "Gestión",
+      "language_section": "Idioma"
+    }
+  }
