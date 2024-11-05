@@ -54,7 +54,21 @@ We welcome contributions to GherkinGuide! If you have an idea for a new feature 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License. This means you can:
+
+- *Share* — copy and redistribute the material in any medium or format
+- *Adapt* — remix, transform, and build upon the material
+
+As long as you follow the license terms:
+
+- *Attribution* — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- *NonCommercial* — You may not use the material for commercial purposes.
+
+You can view the full license here: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+## Contribution
+
+We welcome contributions to GherkinGuide! If you have an idea for a new feature, have found a bug, or would like to propose changes to the code, please open an issue or submit a pull request. Contributions are subject to the terms of the CC BY-NC 4.0 license.
 
 ## Contact
 
