@@ -12,7 +12,11 @@
       "last_updated": "Last Updated",
       "create":"Create",
       "search":"Search",
-      "import":"Import"
+      "import":"Import",
+      "import_section": "Import Feature",
+      "load_file": "Load File",
+      "accept": "Accept",
+      "cancel": "Cancel"
     },
     "es": {
       "title": "Gherkin Guide",
@@ -27,6 +31,10 @@
       "last_updated": "Última Actualización",
       "create":"Crear",
       "search":"Buscar",
-      "import":"Importar"
+      "import":"Importar",
+      "import_section": "Importar Feature",
+      "load_file": "Cargar Archivo",
+      "accept": "Aceptar",
+      "cancel": "Cancelar"
     }
   }

@@ -1,6 +1,7 @@
 import tkinter as tk
 import json
 from tkinter import PhotoImage
+from interfaces.features import create_feature, consult_feature, import_feature
 
 # variable general:
 images_path="interfaces/images/"
@@ -78,9 +79,9 @@ def update_menu(texts):
 
     # Crear el menú "Features" con opciones desplegables
     features_menu = tk.Menu(menu_bar, tearoff=0)
-    features_menu.add_command(label=texts["create"], command=lambda: print("Crear selected"))
-    features_menu.add_command(label=texts["search"], command=lambda: print("Consultar selected"))
-    features_menu.add_command(label=texts["import"], command=lambda: print("Importar selected"))
+    features_menu.add_command(label=texts["create"], command=lambda: create_feature(frame, texts))
+    features_menu.add_command(label=texts["search"], command=lambda: consult_feature(frame, texts))
+    features_menu.add_command(label=texts["import"], command=lambda: import_feature(frame, texts))
     menu_bar.add_cascade(label=texts["features"], menu=features_menu)
 
     # Añadir las opciones directamente a la raíz de la barra de menús
