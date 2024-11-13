@@ -16,7 +16,8 @@
       "import_section": "Import Feature",
       "load_file": "Load File",
       "accept": "Accept",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "load_success": "Load success"
     },
     "es": {
       "title": "Gherkin Guide",
@@ -35,6 +36,7 @@
       "import_section": "Importar Feature",
       "load_file": "Cargar Archivo",
       "accept": "Aceptar",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "load_success": "Carga exitosa"
     }
   }
