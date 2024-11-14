@@ -91,17 +91,7 @@ def limpiar_etiquetas(frame):
         if isinstance(widget, tk.Label):
             widget.config(text="")
 
-def crear_etiqueta_resultado(frame, texto):
-    """Crea una etiqueta en el frame especificado con el texto dado.
 
-    Args:
-        frame (tk.Frame): El frame donde se colocará la etiqueta.
-        texto (str): El texto que se mostrará en la etiqueta.
-    """
-
-    label = tk.Label(frame, text=texto)
-    label.pack(pady=10)
-    return label
 
 # Ejemplo de uso
 query = "login"

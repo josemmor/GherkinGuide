@@ -81,6 +81,7 @@ def update_menu(texts):
     # Crear el menú "Features" con opciones desplegables
     features_menu = tk.Menu(menu_bar, tearoff=0)
     features_menu.add_command(label=texts["create"], command=lambda: create_feature(frame, texts))
+    features_menu.add_command(label=texts["update"], command=lambda: update_feature(frame, texts))
     features_menu.add_command(label=texts["search"], command=lambda: consult_feature(frame, texts))
     features_menu.add_command(label=texts["import"], command=lambda: import_feature(frame, texts))
     menu_bar.add_cascade(label=texts["features"], menu=features_menu)
