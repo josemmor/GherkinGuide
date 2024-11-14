@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 import sqlite3
+from interfaces.buscarfeatures import *
 
 
 #TODO: habria que pensar en tags tambien no?
@@ -95,8 +96,7 @@ def create_feature(frame, texts):
     pass
 
 def consult_feature(frame, texts):
-    # Aquí puedes agregar el código para la funcionalidad "Consultar"
-    pass
+    buscar_features(frame, texts)
 
 #Visualizacion en la ventana de la importacion
 def import_feature(frame, texts):
@@ -172,13 +172,14 @@ def process_feature_file(file_path):
             print("process_feature_file start:")
             current_feature = None
             current_scenario = None
-            #Verificamos que el fichero no de ningun error
+            previous_keyword = None  # Para almacenar el último keyword principal
+            
             try:
                 for line in file: 
                     line = line.strip()
                     print(f"*'{line}'*")
 
-                    #procesamos Feature
+                    # Procesamos Feature
                     if line.startswith("Feature:"):
                         name = line[len("Feature:"):].strip()
                         print(f"  el nombre de la feature es {name}")
@@ -192,34 +193,36 @@ def process_feature_file(file_path):
                         current_feature = Feature(name, description)
                         print(f"  la informacion de la feature es {current_feature}")
                         
-                    #procesamos Scenario    
+                    # Procesamos Scenario    
                     elif line.startswith("Scenario:"):
                         name = line[len("Scenario:"):].strip()
                         print(f"  el nombre del escenario es '{name}'")
                         current_scenario = Scenario(name)
-                        print(f"  el nombre del escenario es '{current_scenario}'")
                         if current_feature:
                             current_feature.add_scenario(current_scenario)
                             print(f"  añadimos el escenario '{name}' a '{current_feature.name}'")
 
-                    #procesamos Steps    
+                    # Procesamos Steps    
                     elif any(line.startswith(keyword) for keyword in ["Given", "When", "Then", "And", "But"]):
                         try:
-                            print(f"  ahora procesamos el step")
                             keyword, text = line.split(" ", maxsplit=1)
+
+                            # Si el keyword es "And" o "But", usa el último keyword principal
+                            if keyword in ["And", "But"] and previous_keyword:
+                                keyword = previous_keyword
+                            elif keyword in ["Given", "When", "Then"]:
+                                # Actualizar el último keyword principal
+                                previous_keyword = keyword
+                            
                             step = Step(keyword, text)
                             if current_scenario:
                                 current_scenario.add_step(step)
-                                print(f"  procesamos el step {step}")
-                                print(f"  añadimos el step {step} a {current_scenario.name}")
+                                print(f"  añadimos el step '{text}' con el keyword '{keyword}' a {current_scenario.name}")
                         except ValueError:
                             print(f"Error al procesar el step: {line}")
                             return False
-
-
                     else:
                         print(f"------> NO SABEMOS QUE ES ESTO: '{line}'------")
-
 
                 return current_feature
             except:
@@ -227,6 +230,7 @@ def process_feature_file(file_path):
                 return False
         else:
             print("No se cargo correctamente el fichero")
+
 
 
 def store_feature_in_db(feature):
@@ -273,14 +277,13 @@ def store_feature_in_db(feature):
 
 
     for scenario in feature.scenarios:
-
         # Verificar si el escenario ya existe
         cursor.execute("SELECT id FROM Scenario WHERE feature_id = ? AND name = ?", (feature_id, scenario.name,))
         existing_scenario = cursor.fetchone()
 
         if existing_scenario:
             scenario_id = existing_scenario[0]
-            print(f"La feature '{scenario.name}' ya existe. Actualizando...")
+            print(f"El escenario '{scenario.name}' ya existe. Actualizando...")
         else:    
             cursor.execute("INSERT INTO Scenario (feature_id, name) VALUES (?, ?)", (feature_id, scenario.name))
             scenario_id = cursor.lastrowid
@@ -290,12 +293,12 @@ def store_feature_in_db(feature):
             cursor.execute("SELECT id FROM Step WHERE scenario_id = ? AND keyword = ? AND text = ?", (scenario_id, step.keyword, step.text))
             existing_step = cursor.fetchone()
 
-        if existing_step:
-            step_id = existing_step[0]
-            print(f"El step '{step_id}' ya existe. Actualizando...")
-        else:    
-            cursor.execute("INSERT INTO Step (scenario_id, keyword, text) VALUES (?, ?, ?)", (scenario_id, step.keyword, step.text))
-            scenario_id = cursor.lastrowid
+            if existing_step:
+                step_id = existing_step[0]
+                print(f"El step '{step.text}' ya existe en el escenario '{scenario.name}'. Actualizando...")
+            else:    
+                cursor.execute("INSERT INTO Step (scenario_id, keyword, text) VALUES (?, ?, ?)", (scenario_id, step.keyword, step.text))
+                print(f"Guardando el step '{step.text}' en el escenario '{scenario.name}'")
   
 
     conn.commit()

@@ -1,6 +1,11 @@
 {
     "en": {
       "title": "Gherkin Guide",
+      "feature": "Feature",
+      "scenario": "Scenario",
+      "step": "Step",
+      "keyword": "Keyword",
+      "text": "text",
       "features": "Features",
       "branches": "Branches",
       "config": "Configuration",
@@ -21,6 +26,11 @@
     },
     "es": {
       "title": "Gherkin Guide",
+      "feature": "Feature",
+      "scenario": "Escenario",
+      "step": "Paso",
+      "text": "texto",
+      "keyword": "Keyword",
       "features": "Features",
       "branches": "Ramas",
       "config": "Configuración",
