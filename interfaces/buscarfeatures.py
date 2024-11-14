@@ -1,7 +1,7 @@
 import sqlite3
 import tkinter as tk
 from tkinter import ttk, StringVar,font
-
+from interfaces.class_feature import *
 
 
 
@@ -58,12 +58,12 @@ def buscar_features(frame, texts):
     tree = ttk.Treeview(frame, style="Treeview", columns=("Feature", "Scenario","Keyword", "Step"))
    
     tree.heading("#0", text="")  # Ocultar la primera columna
-    tree.heading("Feature", text="Feature")
+    tree.heading("Feature", text=texts["feature"])
     tree.column("Feature", width=100, anchor="w")  # Ancho mínimo de 100 píxeles
-    tree.heading("Scenario", text="Scenario")
-    tree.heading("Keyword", text="Keyword")
+    tree.heading("Scenario", text=texts["scenario"])
+    tree.heading("Keyword", text=texts["keyword"])
     tree.column("Keyword", width=100, anchor="w")  # Ancho mínimo de 100 píxeles
-    tree.heading("Step", text="Step")
+    tree.heading("Step", text=texts["step"])
     
     tree.column("#0", width=0, stretch=False)  # Ajustar el ancho y evitar estiramiento
     tree.grid(row=1, column=0, columnspan=4, sticky=tk.NSEW)  # Ocupará toda la fila
