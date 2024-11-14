@@ -2,6 +2,7 @@ import tkinter as tk
 import json
 from tkinter import PhotoImage
 from interfaces.features import create_feature, consult_feature, import_feature
+import interfaces.buscarfeatures as buscarfeatures
 
 # variable general:
 images_path="interfaces/images/"
