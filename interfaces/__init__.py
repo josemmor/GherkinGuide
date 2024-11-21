@@ -70,9 +70,9 @@ def show_about(frame, texts):
 
     # Crear el widget de texto para mostrar la información de la aplicación
     info = f"""
-    {texts["version"]}: 0.0.1
+    {texts["version"]}: 0.0.2
     {texts["creator"]}: Jose Miguel Morales
-    {texts["last_updated"]}: 2024-11-06
+    {texts["last_updated"]}: 2024-11-21
     """
     label_info = tk.Label(frame, text=info, font=("Helvetica", 12), justify=tk.LEFT)
     label_info.grid(row=2, column=0, columnspan=2, pady=10)

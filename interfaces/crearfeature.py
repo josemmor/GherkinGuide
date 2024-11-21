@@ -87,13 +87,13 @@ class FeatureCreator:
        
         # Campo 3: Combobox para Steps existentes del mismo Keyword
         fila = 6
-        tk.Label(self.frame, text="Steps existentes:", font=("Helvetica", 10)).grid(row=fila, column=0, sticky="w")
+        tk.Label(self.frame, text=self.texts["step"] +" "+ self.texts["create"] , font=("Helvetica", 10)).grid(row=fila, column=0, sticky="w")
         self.steps_combobox = ttk.Combobox(self.frame, state="readonly", width=40)
         self.steps_combobox.grid(row=fila, column=1, sticky="w")
 
         # Campo 4: Entry editable con sugerencias de Steps similares
         fila = 7
-        tk.Label(self.frame, text="Sugerencias:", font=("Helvetica", 10)).grid(row=fila, column=0, sticky="w")
+        tk.Label(self.frame,  text=self.texts["text"], font=("Helvetica", 10)).grid(row=fila, column=0, sticky="w")
         self.suggestions_entry = tk.Entry(self.frame, width=40)
         self.suggestions_entry.grid(row=fila, column=1, sticky="w")
         self.suggestions_entry.bind("<KeyRelease>", lambda event: self.update_suggestions())
