@@ -24,7 +24,9 @@
       "load_file": "Load File",
       "accept": "Accept",
       "cancel": "Cancel",
-      "load_success": "Load success"
+      "load_success": "Load success",
+      "name":"Name",
+      "description":"Description"
     },
     "es": {
       "title": "Gherkin Guide",
@@ -51,6 +53,9 @@
       "load_file": "Cargar Archivo",
       "accept": "Aceptar",
       "cancel": "Cancelar",
-      "load_success": "Carga exitosa"
+      "load_success": "Carga exitosa",
+      "name":"Nombre",
+      "description":"Descripcion"
+
     }
   }

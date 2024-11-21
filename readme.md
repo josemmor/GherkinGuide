@@ -73,4 +73,4 @@ You can view the full license here: [CC BY-NC 4.0](https://creativecommons.org/l
 
 ## Contact
 
-For any questions or suggestions, please contact us at josemiguel.morales.tech@bbva.com .
+For any questions or suggestions, please contact us at jmml86@gmail.com.

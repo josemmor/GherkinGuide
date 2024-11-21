@@ -2,8 +2,10 @@
 
 import sqlite3
 from interfaces.buscarfeatures import *
-from interfaces.class_feature import *
+from interfaces.class_feature import Feature,Scenario,Step
 from interfaces.importfeature import *
+from interfaces.crearfeature import FeatureCreator
+
 
 
 
@@ -71,8 +73,15 @@ def search_predictive(query):
 
 
 def create_feature(frame, texts):
-    # Aquí puedes agregar el código para la funcionalidad "Crear"
-    pass
+    try:
+        limpiar_etiquetas(frame)
+        feature_creator = FeatureCreator(frame, texts)
+        feature_creator.create_feature_window()
+    except Exception as e:
+            print(f"Error al create_feature: {e} \n con los datos:{frame} , {texts} ")
+        
+    
+
 
 def consult_feature(frame, texts):
     buscar_features(frame, texts)
