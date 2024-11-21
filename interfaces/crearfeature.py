@@ -118,7 +118,6 @@ class FeatureCreator:
                 conn = sqlite3.connect("features.db")
                 cursor = conn.cursor()
                 cursor.execute("INSERT INTO Feature (name, description) VALUES (?, ?)", (name, description))
-                print("INSERT INTO Feature (name, description) VALUES (?, ?)", (name, description))
                 conn.commit()
                 conn.close()
                 self.update_feature_combobox()
@@ -149,7 +148,7 @@ class FeatureCreator:
     def create_step(self):
         scenario_name = self.selected_scenario_var.get()
         keyword = self.step_keyword_var.get()
-        text = self.step_text_var.get()
+        text = self.suggestions_entry.get()
         if scenario_name and keyword and text:
             conn = sqlite3.connect("features.db")
             cursor = conn.cursor()
@@ -181,7 +180,7 @@ class FeatureCreator:
                 conn.close()
                 messagebox.showerror("Error", "No se pudo encontrar el escenario seleccionado.")
         else:
-            messagebox.showerror("Error", "Debes seleccionar un escenario, un keyword y escribir el texto del paso.")
+            messagebox.showerror("Error", f"Debes seleccionar un escenario{scenario_name}, un keyword  {keyword} y escribir el texto del paso {text}.")
 
     def update_feature_combobox(self):
         conn = sqlite3.connect("features.db")
@@ -189,7 +188,6 @@ class FeatureCreator:
         cursor.execute("SELECT name FROM Feature ORDER BY name")
         features = [row[0] for row in cursor.fetchall()]
         conn.close()
-        
         self.feature_combobox['values'] = features
         if features:
             self.feature_combobox.current(0)

@@ -1,7 +1,7 @@
 import tkinter as tk
 import json
 from tkinter import PhotoImage
-from interfaces.features import create_feature, consult_feature, import_feature
+from interfaces.features import create_feature, consult_feature, exportfeature, import_feature
 import interfaces.buscarfeatures as buscarfeatures
 
 # Variable general:
@@ -88,6 +88,7 @@ def update_menu(texts):
     features_menu.add_command(label=texts["update"], command=lambda: update_feature(frame, texts))
     features_menu.add_command(label=texts["search"], command=lambda: consult_feature(frame, texts))
     features_menu.add_command(label=texts["import"], command=lambda: import_feature(frame, texts))
+    features_menu.add_command(label=texts["export"], command=lambda: exportfeature(frame, texts))
     menu_bar.add_cascade(label=texts["features"], menu=features_menu)
 
     # Añadir las opciones directamente a la raíz de la barra de menús

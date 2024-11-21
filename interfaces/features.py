@@ -5,6 +5,9 @@ from interfaces.buscarfeatures import *
 from interfaces.class_feature import Feature,Scenario,Step
 from interfaces.importfeature import *
 from interfaces.crearfeature import FeatureCreator
+from interfaces.updatefeatures import *
+from interfaces.exportfeatures import *
+
 
 
 
@@ -85,6 +88,15 @@ def create_feature(frame, texts):
 
 def consult_feature(frame, texts):
     buscar_features(frame, texts)
+
+
+
+def import_feature(frame, texts):
+    import_feature(frame, texts)
+
+
+def exportfeature(frame, texts):
+    export_feature(frame, texts)
 
 
 
