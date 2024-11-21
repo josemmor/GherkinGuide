@@ -27,7 +27,7 @@ GherkinGuide is an open-source Python tool designed to simplify and enhance the 
 To install GherkinGuide, you can clone the repository and install the dependencies:
 
 bash
-git clone https://github.com/yourusername/GherkinGuide.git
+git clone https://github.com/jmml86/GherkinGuide.git
 cd GherkinGuide
 pip install -r requirements.txt
 

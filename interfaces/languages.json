@@ -26,7 +26,18 @@
       "cancel": "Cancel",
       "load_success": "Load success",
       "name":"Name",
-      "description":"Description"
+      "description":"Description",
+      "export": "Export",
+      "export_success": "Export Successful",
+      "export_message": "The features have been successfully exported to {0}",
+      "warning": "Warning",
+      "no_features": "No features to export",
+      "error": "Error",
+      "export_title": "Export Feature",
+      "export_button": "Export",
+      "select_feature": "Please select a feature to export",
+      "feature_not_found": "Feature not found"
+      
     },
     "es": {
       "title": "Gherkin Guide",
@@ -55,7 +66,17 @@
       "cancel": "Cancelar",
       "load_success": "Carga exitosa",
       "name":"Nombre",
-      "description":"Descripcion"
+      "description":"Descripcion",
+      "export": "Exportar",
+      "warning": "Advertencia",
+      "no_features": "No hay características para exportar",
+      "error": "Error",
+      "export_title": "Exportar Feature",
+      "export_button": "Exportar",
+      "export_success": "Éxito en la exportación",
+      "export_message": "La feature se ha exportado correctamente a {0}",
+      "select_feature": "Por favor, selecciona una feature para exportar",
+      "feature_not_found": "Feature no encontrada"
       
 
     }
