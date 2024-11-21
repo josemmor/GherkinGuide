@@ -91,7 +91,7 @@ def consult_feature(frame, texts):
 
 
 
-def import_feature(frame, texts):
+def importfeature(frame, texts):
     import_feature(frame, texts)
 
 

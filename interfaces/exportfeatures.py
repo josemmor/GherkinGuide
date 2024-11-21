@@ -80,7 +80,7 @@ def export_feature(frame, texts):
                             feature_content += f"    {keyword} {step_text}\n"
 
                     # Especificar el archivo de salida
-                    file_name = f"feature_{selected_feature_name}.feature"
+                    file_name = f"{selected_feature_name}.feature"
 
                     # Guardar el contenido en un archivo .feature
                     with open(file_name, "w", encoding="utf-8") as f:
