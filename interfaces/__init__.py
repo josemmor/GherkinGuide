@@ -1,7 +1,7 @@
 import tkinter as tk
 import json
 from tkinter import PhotoImage
-from interfaces.features import create_feature, consult_feature, exportfeature, importfeature
+from interfaces.features import create_feature, consult_feature, exportfeature, importfeature,update_feature
 import interfaces.buscarfeatures as buscarfeatures
 
 # Variable general:

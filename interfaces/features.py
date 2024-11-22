@@ -98,6 +98,9 @@ def importfeature(frame, texts):
 def exportfeature(frame, texts):
     export_feature(frame, texts)
 
+def update_feature(frame, texts):
+    buscar_features_editable(frame, texts)
+
 
 
 
